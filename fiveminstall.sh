@@ -90,7 +90,7 @@ sv_maxclients 32
 set steam_webApiKey ""
 
 # License key for your server (https://keymaster.fivem.net)
-sv_licenseKey uhcuhys91h56dw3yusa7ck06q5jglzem
+sv_licenseKey changeme
 EOF
 
 cd ~
