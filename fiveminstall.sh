@@ -6,13 +6,13 @@ sudo apt upgrade -y
 
 sudo apt install mariadb-server -y
 
-sudo mkdir /home/jesjhoward/FXServer
-sudo mkdir /home/jesjhoward/FXServer/server
-cd /home/jesjhoward/FXServer/server
+sudo mkdir /home/$USER/FXServer
+sudo mkdir /home/$USER/FXServer/server
+cd /home/$USER/FXServer/server
 sudo wget https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/3184-6123f9196eb8cd2a987a1dd7ff7b36907a787962/fx.tar.xz
 sudo tar xf fx.tar.xz
 cd ..
-sudo git clone https://github.com/citizenfx/cfx-server-data.git /home/jesjhoward/FXServer/server-data
+sudo git clone https://github.com/citizenfx/cfx-server-data.git /home/$USER/FXServer/server-data
 cd server-data
 cat <<EOF >server.cfg
 # Only change the IP if you're using a server with multiple network interfaces, otherwise change the port only.
@@ -97,8 +97,8 @@ cat <<EOF >gtastart.sh
 sudo systemctl stop mysql
 sudo mysqld --skip-grant-tables &
 
-cd /home/jesjhoward/FXServer/server-data
-sudo bash /home/jesjhoward/FXServer/server/run.sh +exec server.cfg
+cd /home/$USER/FXServer/server-data
+sudo bash /home/$USER/FXServer/server/run.sh +exec server.cfg
 EOF
 sudo chmod +x gtastart.sh
 sudo chmod -R 777 FXServer
