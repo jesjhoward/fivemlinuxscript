@@ -100,6 +100,7 @@ sudo mysqld --skip-grant-tables &
 cd /home/jesjhoward/FXServer/server-data
 sudo bash /home/jesjhoward/FXServer/server/run.sh +exec server.cfg
 EOF
+sudo chmod +x gtastart.sh
 sudo chmod -R 777 FXServer
 
 sudo mysql_secure_installation
