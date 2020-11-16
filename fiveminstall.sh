@@ -13,7 +13,9 @@ sudo wget https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/318
 sudo tar xf fx.tar.xz
 cd ..
 sudo git clone https://github.com/citizenfx/cfx-server-data.git /home/$USER/FXServer/server-data
-cd server-data
+cd ~
+sudo chmod -R 777 FXServer
+cd FXServer/server-data
 sudo cat <<EOF >server.cfg
 # Only change the IP if you're using a server with multiple network interfaces, otherwise change the port only.
 endpoint_add_tcp "0.0.0.0:30120"
