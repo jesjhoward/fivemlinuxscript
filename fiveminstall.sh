@@ -14,7 +14,7 @@ sudo tar xf fx.tar.xz
 cd ..
 sudo git clone https://github.com/citizenfx/cfx-server-data.git /home/$USER/FXServer/server-data
 cd server-data
-cat <<EOF >server.cfg
+sudo cat <<EOF >server.cfg
 # Only change the IP if you're using a server with multiple network interfaces, otherwise change the port only.
 endpoint_add_tcp "0.0.0.0:30120"
 endpoint_add_udp "0.0.0.0:30120"
